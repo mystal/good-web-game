@@ -95,6 +95,10 @@ pub fn screen_coordinates(ctx: &Context) -> Rect {
     ctx.gfx_context.webgl_context.screen_rect
 }
 
+pub fn set_projection(ctx: &mut Context, matrix: cgmath::Matrix4<f32>) {
+    ctx.gfx_context.set_projection(matrix);
+}
+
 /// Tells the graphics system to actually put everything on the screen.
 /// Call this at the end of your [`EventHandler`](../event/trait.EventHandler.html)'s
 /// [`draw()`](../event/trait.EventHandler.html#tymethod.draw) method.

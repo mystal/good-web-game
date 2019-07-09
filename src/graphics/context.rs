@@ -1,7 +1,7 @@
 use crate::graphics::types::{Rect, *};
 use stdweb::{web::html_element::*, web::*};
 
-use cgmath::Matrix3;
+use cgmath::{Matrix3, Matrix4};
 
 pub(crate) mod canvas;
 pub(crate) mod webgl;
@@ -73,6 +73,10 @@ impl GraphicsContext {
     pub fn set_screen_coordinates(&mut self, rect: crate::graphics::types::Rect) {
         self.canvas_context.set_screen_coordinates(rect);
         self.webgl_context.set_projection_rect(rect);
+    }
+
+    pub fn set_projection(&mut self, matrix: Matrix4<f32>) {
+        self.webgl_context.set_projection_matrix(matrix);
     }
 }
 
