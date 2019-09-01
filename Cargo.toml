@@ -11,7 +11,7 @@ rustc-hash = "1.0.1"
 lazy_static = "1.3.0"
 mint = "0.5"
 smart-default = "0.3"
-cgmath = { version = "0.16", features = ["mint"] }
-nalgebra = { version = "0.16", features = ["mint", "stdweb"], optional = true }
+cgmath = { version = "0.17", features = ["mint"] }
+nalgebra = { version = "0.18", features = ["mint", "stdweb"], optional = true }
 stdweb = "0.4.12"
 webgl_stdweb = { git = "https://github.com/not-fl3/gl-rs.git", default-features = false }
